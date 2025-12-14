@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    --color-primary: #0A2540;
+    --color-secondary: #3B82F6;
+    --color-accent: #22D3EE;
+    --color-background: #0F172A;
+    --color-card: #111827;
+    --color-text-primary: #E5E7EB;
+    --color-text-muted: #9CA3AF;
+    --color-success: #22C55E;
+    --color-warning: #FACC15;
+    --color-danger: #EF4444;
+  }
+}
+
+/* Re-map utilities to custom properties or just use the classes. 
+   For v4, theme extension is done in CSS or config. 
+   To keep it simple and compatible with existing classes like 'bg-primary', we map them. 
+*/
+
+@theme {
+  --color-primary: #0A2540;
+  --color-secondary: #3B82F6;
+  --color-accent: #22D3EE;
+  --color-background: #0F172A;
+  --color-card: #111827;
+  --color-textPrimary: #E5E7EB;
+  --color-textMuted: #9CA3AF;
+  --color-success: #22C55E;
+  --color-warning: #FACC15;
+  --color-danger: #EF4444;
+  --font-sans: Inter, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-textPrimary font-sans antialiased;
+  }
+}
